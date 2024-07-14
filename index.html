@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Médicos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .agenda {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+            }
+
+        button {
+
+            /* margin: 16px auto;*/ 
+            padding: 1rem;
+            background-color: #fff;
+          /*  border-radius: 8px; */
+            border: none;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        .buttonSearch {
+            display: inline-block;
+            /*padding: 10px 20px;*/
+            margin-left: 5px;
+            font-size: 16px;
+            text-align: center; /* Alinhamento horizontal */
+            line-height: 30px; /* Ajuste de altura da linha para alinhamento vertical */
+            vertical-align: middle; /* Alinhamento vertical */
+            background-color: #fff;
+            color: #989898;
+            border: none;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+         /* border-color: #007bff; /* Azul para indicar foco */
+            color: #fff;
+            background-color: #007bff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition:  0.3s;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+        .passed {
+            background-color: #ffcccc !important;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+        /* Estilos para a inputbox */
+.custom-input {
+  position: relative;
+  font-size: 18px;
+  width: 300px;
+  height: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+/* Estilizando a borda quando focada */
+.custom-input:focus {
+  border-color: #007bff; /* Azul para indicar foco */
+}
+
+
+/* Estilizando a borda inferior */
+.custom-input::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff; /* Cor da borda inferior */
+  transform: scaleX(0); /* Começa invisível */
+  transition: transform 0.3s;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="agenda"><h1>Agenda de Médicos</h1></div>
+
+<div class="agenda">
+    <button>Segunda-feira</button><button>Terça-feira</button><button>Quarta-feira</button><button>Quinta-feira</button>
+    <button>Sexta-Feira</button>
+</div>
+
+
+
+
+
+<div class="agenda">    <!-- Inputbox com o label flutuante -->
+
+        <input type="text" class="custom-input" id="inputField" placeholder="Pesquisar..."><button class="buttonSearch" >Pesquisar</button>
+
+            
+</div>
+
+
+
+
+
+<!--Segunda feira-->
+
+<div class="agenda">
+    <h2>Segunda-Feira</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Médico</th>
+                <th>Especialidade</th>
+                <th>Dia da Semana</th>
+                <th>Horário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dra. Roiza</td>
+                <td>Neurologista</td>
+                <td>Segunda-feira</td>
+                <td class="check-time" >08:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Luiz Fernando</td>
+                <td>Urologista</td>
+                <td>Segunda-feira</td>
+                <td class="check-time">08:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Francisco</td>
+                <td>Proctologista</td>
+                <td>Segunda-feira</td>
+                <td class="check-time">08:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Paluza</td>
+                <td>Ginecologia</td>
+                <td>Segunda-feira</td>
+                <td class="check-time">09:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Bianca de Almeida</td>
+                <td>Pneumologista</td>
+                <td>Segunda-feira</td>
+                <td class="check-time">10:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Gabriela Paiva</td>
+                <td>Endocrinologista</td>
+                <td>Segunda-feira</td>
+                <td class="check-time">13:00 - 15:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Natália Ganen</td>
+                <td>Alergista</td>
+                <td>Segunda-feira</td>
+                <td class="check-time">13:00 - 15:00</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="footer">
+        <!--<p>&copy; 2024 Agenda de Médicos. Todos os direitos reservados.</p>-->
+    </div>
+</div>
+
+
+<!--############################## - Terça feira - #################################--->
+
+
+<div class="agenda">
+    <h2>Terça-Feira</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Médico</th>
+                <th>Especialidade</th>
+                <th>Dia da Semana</th>
+                <th>Horário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dr. Paulo Cesar</td>
+                <td>Ortopedista</td>
+                <td>Terça-feira</td>
+                <td class="check-time" >08:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. David</td>
+                <td>Urologista</td>
+                <td>Terça-feira</td>
+                <td class="check-time">10:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Wander Luis</td>
+                <td>Cardiologista</td>
+                <td>Terça-feira</td>
+                <td class="check-time">11:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Marcia Guião</td>
+                <td>Gastro</td>
+                <td>Terça-feira</td>
+                <td class="check-time">13:00 - 12:00</td>
+            </tr>
+  
+
+        </tbody>
+    </table>
+    <div class="footer">
+        <!--<p>&copy; 2024 Agenda de Médicos. Todos os direitos reservados.</p>-->
+    </div>
+</div>
+
+
+
+<!--################################## - Quarta-feira - ################################-->
+
+<div class="agenda">
+    <h2>Quarta-Feira</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Médico</th>
+                <th>Especialidade</th>
+                <th>Dia da Semana</th>
+                <th>Horário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dr. Sylvio Picanço</td>
+                <td>Otorrinolaringologista</td>
+                <td>Quarta-feira</td>
+                <td class="check-time" >08:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Emanuel</td>
+                <td>Urologista</td>
+                <td>Quarta-feira</td>
+                <td class="check-time">08:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Wander Luis</td>
+                <td>Cardiologista</td>
+                <td>Quarta-feira</td>
+                <td class="check-time">11:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Marcia Guião</td>
+                <td>Gastro</td>
+                <td>Terça-feira</td>
+                <td class="check-time">13:00 - 12:00</td>
+            </tr>
+  
+
+        </tbody>
+    </table>
+    <div class="footer">
+        <!--<p>&copy; 2024 Agenda de Médicos. Todos os direitos reservados.</p>-->
+    </div>
+</div>
+
+
+<!--################################## - Quinta-feira - ################################-->
+
+<div class="agenda">
+    <h2>Quinta-Feira</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Médico</th>
+                <th>Especialidade</th>
+                <th>Dia da Semana</th>
+                <th>Horário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dr. Luis Fernando</td>
+                <td>Urologista</td>
+                <td>Quinta-feira</td>
+                <td class="check-time" >08:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Paula Fang</td>
+                <td>Ortopedista</td>
+                <td>Quinta-feira</td>
+                <td class="check-time">09:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Fritz</td>
+                <td>Ginecologia</td>
+                <td>Quinta-feira</td>
+                <td class="check-time">12:00 - 15:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Marcia Guião</td>
+                <td>Gastro</td>
+                <td>Terça-feira</td>
+                <td class="check-time">13:00 - 12:00</td>
+            </tr>
+  
+
+        </tbody>
+    </table>
+    <div class="footer">
+        <!--<p>&copy; 2024 Agenda de Médicos. Todos os direitos reservados.</p>-->
+    </div>
+</div>
+
+
+
+
+
+<!--################################## - Sexta-feira - ################################-->
+
+<div class="agenda">
+    <h2>Sexta-Feira</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Médico</th>
+                <th>Especialidade</th>
+                <th>Dia da Semana</th>
+                <th>Horário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dr. Francisco</td>
+                <td>Proctologista</td>
+                <td>Sexta-feira</td>
+                <td class="check-time" >08:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Maria do Carmo</td>
+                <td>Neurologista</td>
+                <td>Sexta-feira</td>
+                <td class="check-time">09:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>Dr. Christiane  Romao</td>
+                <td>Dermatologista</td>
+                <td>Sexta-feira</td>
+                <td class="check-time">09:00 - 15:00</td>
+            </tr>
+ 
+
+        </tbody>
+    </table>
+    <div class="footer">
+        <!--<p>&copy; 2024 Agenda de Médicos. Todos os direitos reservados.</p>-->
+    </div>
+</div>
+
+
+
+<script>
+    // Função para comparar o horário atual com o horário da tabela
+    function checkTime() {
+        var currentTime = new Date();
+        var currentHour = currentTime.getHours();
+        var currentMinute = currentTime.getMinutes();
+
+        // Loop através das células de horário
+        var timeCells = document.getElementsByClassName('check-time');
+        for (var i = 0; i < timeCells.length; i++) {
+            var timeText = timeCells[i].textContent;
+            var startTime = timeText.split(' ')[0];
+            var startHour = parseInt(startTime.split(':')[0]);
+            var startMinute = parseInt(startTime.split(':')[1]);
+
+            // Comparação de horário
+            if (currentHour > startHour || (currentHour === startHour && currentMinute >= startMinute)) {
+                timeCells[i].parentNode.classList.add('passed');
+            }
+        }
+    }
+
+    // Chamada inicial da função ao carregar a página
+    checkTime();
+
+    // Atualização a cada minuto para verificar se o horário passou
+    setInterval(checkTime, 60000); // 60000 milissegundos = 1 minuto
+</script>
+</body>
+</html>
+
