@@ -18,6 +18,11 @@
             text-align: center;
             color: #333;
         }
+                .dia-atual {
+            background-color: #d4edda;
+            color: #155724;
+            border-color: #c3e6cb;
+        }
         .agenda {
             width: 100%;
             max-width: 800px;
@@ -131,8 +136,8 @@
 <div class="agenda"><h1>Agenda de Médicos</h1></div>
 
 <div class="agenda">
-    <button>Segunda-feira</button><button>Terça-feira</button><button>Quarta-feira</button><button>Quinta-feira</button>
-    <button>Sexta-Feira</button>
+    <button1 id="segunda">Segunda-feira</button><button id="terca">Terça-feira</button><button id="quarta">Quarta-feira</button><button id="quinta">Quinta-feira</button>
+    <button id="sexta">Sexta-Feira</button>
 </div>
 
 
@@ -434,6 +439,18 @@
 
     // Atualização a cada minuto para verificar se o horário passou
     setInterval(checkTime, 60000); // 60000 milissegundos = 1 minuto
+
+    
+
+            function marcarDiaAtual() {
+            const diasSemana = ["domingo", "segunda", "terca", "quarta", "quinta", "sexta", "sabado"];
+            const hoje = new Date().getDay();
+            const diaAtual = diasSemana[hoje];
+            
+            document.getElementById(diaAtual).classList.add("dia-atual");
+        }
+
+        window.onload = marcarDiaAtual;
 </script>
 </body>
 </html>
